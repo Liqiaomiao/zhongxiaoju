@@ -15,7 +15,7 @@
         var htmlFontsize = document.documentElement.clientWidth/16;
         document.getElementsByTagName('html')[0].style.fontSize=htmlFontsize+"px";
     </script>
-    <title>Title</title>
+    <title>中小企业</title>
 </head>
 <body>
     <div class="login_box">
@@ -23,17 +23,22 @@
         <form>
             <input type="text" placeholder="请输入手机号或者邮箱" maxlength="11">
             <input type="password" placeholder="请输入登录密码" >
-            <input type="button" value="登录">
+            <button type="button">登录</button>
         </form>
         <p>还没账号？立即注册</p>
     </div>
 </body>
 <script>
-    $(document).ready(function () {
+      $(document).ready(function () {
         var screenw =  $(document).height();
         $("body").height(screenw);
+
     });
+    var evt = "onorientationchange" in window ? "orientationchange" : "resize";
 
-
+    window.addEventListener(evt, function() {
+        var screenw =  $(document).height();
+        $("body").height(screenw);
+    }, false);
 </script>
 </html>
