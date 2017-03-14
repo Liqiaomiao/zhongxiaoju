@@ -29,11 +29,16 @@
     </div>
 </body>
 <script>
-    $(document).ready(function () {
+      $(document).ready(function () {
         var screenw =  $(document).height();
         $("body").height(screenw);
+
     });
+    var evt = "onorientationchange" in window ? "orientationchange" : "resize";
 
-
+    window.addEventListener(evt, function() {
+        var screenw =  $(document).height();
+        $("body").height(screenw);
+    }, false);
 </script>
 </html>
