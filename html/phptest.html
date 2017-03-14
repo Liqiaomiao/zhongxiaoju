@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/houtaim.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+
+    <title>法律法规-04发布法律讲堂-弹窗</title>
+
+</head>
+<body>
+
+</body>
+</html>
+<form class="formloading" >
+    <p class="poptit">视频信息</p>
+    <ul>
+        <li>
+            <div class="loadingbox">
+                <p class="uploadbar"></p>
+            </div>
+            <a class="col_orange">0%</a>
+        </li>
+        <li class="mb10">
+            <label>
+                <span>标题：</span>
+                <input type="text" />
+            </label>
+        </li>
+        <li>
+            <label>
+                <span>标签：</span>
+                <input type="text" />
+            </label>
+        </li>
+    </ul>
+    <input type="button" class="btn_solid" value="click"/>
+</form>
+<script>
+
+    var  n =0;
+    var w = 0;
+   var   timer=   setInterval(function () {
+        $(".uploadbar").css({"width":n});
+        $(".col_orange").html(parseInt(w/350*100)+"%");
+        n+=10;
+        w = $(".uploadbar").width() ;
+        if($(".uploadbar").width()>350){
+            clearInterval(timer);
+            $(".uploadbar").width("350px");
+        }
+    },1000/60)
+</script>
+</body>
+</html>
