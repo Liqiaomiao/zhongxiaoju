@@ -6,6 +6,6 @@
 .login_box  ::-webkit-input-placeholder {color:#fff;}
 .login_box  :-moz-placeholder { color:#fff;}
 .login_box  ::-moz-placeholder {　color:#fff;}
-.login_box form{margin: 0 auto;width: 13rem}
+.login_box form{margin: 0 auto;width:100%;}
 .login_box button{background-color:#f60}
-.login_box p{text-align: center;color: #fff;font-size: 0.6rem;position: absolute;bottom: 1rem;width: 13rem;}
+.login_box p{text-align: center;color: #fff;font-size: 0.6rem;position: absolute;bottom: 1rem;width:100%}
